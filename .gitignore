@@ -1,3 +1,4 @@
 directus/*
 umbrella/db/*
 umbrella/log/*
+umbrella-setup/geckodriver.log

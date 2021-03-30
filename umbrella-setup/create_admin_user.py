@@ -18,13 +18,30 @@ EMAIL = "admin@wifisess.gov"
 driver = connectFirefox()
 
 print(sys.argv)
-driver.get("https://" + sys.argv[1] + "/admins/signup")
-elem = driver.find_element(By.ID, 'admin_username')
-elem.send_keys(EMAIL)
-elem = driver.find_element(By.ID, "admin_password")
-elem.send_keys(EMAIL)
-elem = driver.find_element(By.ID, "admin_password_confirmation")
-elem.send_keys(EMAIL)
+if driver.get("https://" + sys.argv[1] + "/admins/signup"):
+    elem = driver.find_element(By.ID, 'admin_username')
+    elem.send_keys(EMAIL)
+    elem = driver.find_element(By.ID, "admin_password")
+    elem.send_keys(EMAIL)
+    elem = driver.find_element(By.ID, "admin_password_confirmation")
+    elem.send_keys(EMAIL)
+    elem = driver.find_element(By.NAME, "commit")
+    elem.click()
 
-elem = driver.find_element(By.NAME, "commit")
-elem.click()
+# # Create an API key. Again, via selenium.
+# if driver.get("https://" + sys.argv[1] + "/signup"):
+#     e = driver.find_element(By.ID, "user_first_name")
+#     e.send_keys("The")
+
+#     e = driver.find_element(By.ID, "user_last_name")
+#     e.send_keys("Admin")
+
+#     e = driver.find_element(By.ID, "user_email")
+#     e.send_keys(email)
+
+#     e = driver.find_element(By.ID, "user_terms_and_conditions")
+#     e.click()
+
+#     e = driver.find_element(BY.TYPE, "submit")
+#     e.click()
+

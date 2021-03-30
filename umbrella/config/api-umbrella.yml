@@ -3,8 +3,4 @@ web:
     auth_strategies:
       enabled:
         - local
-    # password_length_min: 14
-    # password_length_max: 72
-    # initial_superusers:
-    #   - admin@wifisess.gov
     username_is_email: true
