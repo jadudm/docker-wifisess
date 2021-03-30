@@ -1,4 +1,4 @@
-
+from selenium.webdriver.common.by import By
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from pyvirtualdisplay import Display
@@ -8,6 +8,8 @@ def connectFirefox():
     options = FirefoxOptions()
     options.add_argument("--headless")
     driver = webdriver.Firefox(options=options)
+    profile = webdriver.FirefoxProfile()
+    profile.accept_untrusted_certs = True
     print("Firefox Headless Browser Invoked")
     return driver
 

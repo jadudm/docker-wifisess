@@ -27,5 +27,5 @@ docker build -t 18f/selenium umbrella-setup
 and to run
 
 ```
-docker run --net host -v ${PWD}/umbrella-setup:/src 18f/selenium create_admin_user.py 192.168.1.146
+docker run --net host -it -v ${PWD}/umbrella-setup:/src 18f/selenium create_admin_user.py localhost
 ```
