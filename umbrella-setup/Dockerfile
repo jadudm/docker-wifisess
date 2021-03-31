@@ -11,7 +11,7 @@ RUN apt-get update && \
 COPY geckodriver /usr/bin/geckodriver
 RUN chmod 755 /usr/bin/geckodriver
 
-RUN pip install selenium pyvirtualdisplay
+RUN pip install selenium requests
 WORKDIR /src
 # COPY create_admin_user.py .
 ENTRYPOINT ["python3"]
